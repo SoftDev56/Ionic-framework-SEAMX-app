@@ -1,0 +1,17 @@
+<ion-content class="ion-no-padding">
+  <ion-grid class="allset-container">
+      <ion-row class="ion-justify-content-center">
+        <ion-label color="light" class="head">{{ 'ALLSET.YOU_ARE_ALLSET' | translate }}</ion-label>
+      </ion-row>
+      <ion-row class="ion-justify-content-center">
+        <!-- <ion-label color="light" class="sub-head"> {{ event.daysLeft }} days left for the {{ event.name }}.</ion-label> -->
+        <ion-label color="light" class="sub-head"> {{ 'ALLSET.DAYS_LEFT_FOR' | translate }} {{ event.name }}.</ion-label>
+      </ion-row>     
+      <ion-row class="ion-justify-content-center">
+        <img src="assets/img/bigmarathon.png">
+      </ion-row>      
+  </ion-grid>
+  <ion-row class="ion-justify-content-center">
+    <ion-button class="allset-btn" expand="block" color="seamx" routerLink="/tab-root">{{ 'ALLSET.CONTINUE' | translate }}</ion-button>
+  </ion-row>
+</ion-content>

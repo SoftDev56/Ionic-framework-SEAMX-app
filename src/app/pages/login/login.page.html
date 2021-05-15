@@ -1,0 +1,51 @@
+
+<ion-header class="ion-no-border">
+    <ion-toolbar color="transparent">
+        <ion-buttons slot="start">
+            <ion-back-button style="color: #030952;" defaultHref="/landing"></ion-back-button>
+        </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+<ion-content class="padding">
+    <ion-grid>
+        <ion-row class="ion-justify-content-center">
+            <img class="top-art" src="assets/img/topart.png">
+        </ion-row>
+        <ion-row class="ion-justify-content-center">
+            <ion-label class="login">{{ 'LOGIN.LOG_IN_TO_SEAMX' | translate }}</ion-label>
+        </ion-row>
+        <ion-row class="ion-justify-content-center">
+            <ion-input 
+            type="email" 
+            placeholder="Email" 
+            (change)="onEmailChange()" 
+            [(ngModel)]="user.emailAddress"
+            ></ion-input>
+        </ion-row>
+        <ion-row class="ion-justify-content-center">
+            <ion-input 
+            type="password" 
+            placeholder="Password" 
+            (change)="onPWChange()" 
+            [(ngModel)]="user.password"
+            (keyup.enter)="login()"
+            ></ion-input>
+        </ion-row>
+        <ion-row class="ion-justify-content-center">  
+            <ion-label class="error" *ngIf="isError">{{ 'LOGIN.WRONG_CREDENTIALS' | translate }}</ion-label>          
+        </ion-row>
+        <ion-row class="ion-justify-content-center">
+            <ion-button 
+            class="login-btn" 
+            expand="block" 
+            color="seamx" 
+            (keyup.enter)="login()"
+            (click)="login()"
+            >Login</ion-button>
+        </ion-row>       
+        <!-- <ion-row style="margin-top:30px;" class="ion-justify-content-center">
+            <img class="logo" src="assets/img/logo_with_text.png">
+        </ion-row>               -->
+    </ion-grid>
+
+</ion-content>

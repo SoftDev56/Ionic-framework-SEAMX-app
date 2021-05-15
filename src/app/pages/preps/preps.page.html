@@ -1,0 +1,21 @@
+<ion-content class="ion-fullscreen">
+    <ion-row>
+        <ion-label class="mid-heading">{{ 'PREPS.MY_PREPARATIONS' | translate }}</ion-label>
+    </ion-row>               
+    <ion-row class="ion-justify-content-center">
+        <ion-text >{{ daysLeft }} {{ 'PREPS.DAYS_LEFT' | translate }}</ion-text>
+        <ion-progress-bar color="primary" [value]="percentCompleted"></ion-progress-bar>
+        <ion-text >{{completePreps}}/{{ totalPreps }} {{ 'PREPS.PREPS_COMPLETED' | translate }}</ion-text>
+    </ion-row>
+  <ion-row class="ion-justify-content-center">
+      <app-prep-slider 
+        [cards]="userPreps" 
+        [inside]="true"
+        (onPrepDel)="removePrep($event)"
+        (onPrepTick)="completePrep($event)"
+    ></app-prep-slider>
+  </ion-row>
+  <ion-row class="ion-justify-content-center">
+      <ion-button expand="block" color="light" (click)="addNewPreps()">{{ 'PREPS.ADD_NEW_PREPS' | translate }}</ion-button>
+  </ion-row>   
+</ion-content>

@@ -1,0 +1,35 @@
+<ion-header class="ion-no-border">
+    <ion-toolbar color="transparent">  
+        <ion-buttons slot="start">
+            <ion-back-button routerLink="/tab-root/tabs/profile" style="color: white;"></ion-back-button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+<ion-content class="ion-padding">
+    <img class="top-art" src="assets/img/profiletop.png" alt=""/>
+    <div class="avatar {{isImage('avatar')}}">
+            <img src="{{user.image}}" alt=""/>
+    </div>   
+    <span class="change-avatar {{isImage('ch-avatar')}}" (click)="goToCamera()"><ion-icon name="camera-outline"></ion-icon></span> 
+    <div class="name {{isImage('name')}}">
+            <ion-label class="sub-heading" color="light" >{{ changedName }}</ion-label>
+    </div>  
+    <ion-row class="ion-justify-content-center">      
+    <ion-list lines="none">
+            <ion-label>{{ 'PROFILE-DETAIL.NAME' | translate }}</ion-label>
+            <ion-item>
+                <ion-input [disabled]="isEditName" value="{{username}}" (keyup)="onNameInput($event)"></ion-input>
+                <ion-button slot="end" fill="clear" (click)="editName()">
+                    <ion-icon name="pencil"></ion-icon>
+                </ion-button>
+            </ion-item>
+            <ion-label>{{ 'PROFILE-DETAIL.EMAIL' | translate }}</ion-label>
+            <ion-item>                
+                <ion-input [disabled]="isEditEmail" value="{{user.emailAddress}}" (keyup)="onEmailInput($event)"></ion-input>
+                <ion-button slot="end" fill="clear" (click)="editEmail()">
+                    <ion-icon name="pencil"></ion-icon>
+                </ion-button>
+            </ion-item>
+    </ion-list>   
+    </ion-row>   
+</ion-content>

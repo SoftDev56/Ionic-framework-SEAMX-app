@@ -1,0 +1,94 @@
+ion-grid {
+    
+    .top-art {
+        width: auto;
+        height: 30vh;
+        margin: 10% auto;
+    }
+
+    .logo {
+        width: auto;
+        height: 15vh;
+    }
+
+    .error {
+        color: red;
+        @media (max-device-width: 600px) {
+            font-size: 1.5rem;
+            height: 3rem;
+            margin: 2rem auto;
+            width: 80%;
+            text-align: center;
+        }
+        @media (min-device-width: 601px) {
+            font-size: 2rem;
+            height: 4rem;
+            margin: 2rem auto;
+            width: 80%;
+            text-align: center;
+        }
+        @media (min-device-width: 1024px) {
+            font-size: 2.5rem;
+            height: 4rem;
+            margin: 2rem auto;
+            width: 80%;
+            text-align: center;
+        }   
+    }
+    ion-row {
+        --ion-row-margin: 2%;
+        margin: 2%; 
+    }
+
+    ion-input {                                                               
+        max-width: 70vw;
+        border: 1px solid #DFDFDF;
+        background-color: transparent;
+        border-radius: 10px;
+        text-transform: none;
+        @media (max-device-width: 600px) {
+            font-size: 1.4rem;
+            height: 4rem;
+        }
+        @media (min-device-width: 601px) {
+            font-size: 2rem;
+            height: 4rem;
+        }
+        @media (min-device-width: 1024px) {
+            font-size: 2.5rem;
+            height: 4rem;
+        }             
+    }    
+
+    ion-button {
+        width: 70vw;
+        font-weight: 600;
+        @media (max-device-width: 600px) {
+            height: 4rem;
+            font-size: 1.6rem;
+        }
+        @media (min-device-width: 601px) {
+            height: 4rem;
+            font-size: 2rem;
+        }
+        @media (min-device-width: 1024px) {
+            height: 5rem;
+            font-size: 2.5rem;
+        }                                                                      
+        --border-color: #DFDFDF;
+        text-transform: none;
+        color: #030952; 
+    }
+}
+
+.login {
+    font-size: 2.4rem;
+    margin-bottom: 10%;
+    font-weight: bold;
+    color: #030952;
+}
+
+.or {
+    font-size: 1.4rem;
+    color: #030952;
+}

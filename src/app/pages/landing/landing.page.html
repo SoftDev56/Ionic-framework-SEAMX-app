@@ -1,0 +1,41 @@
+
+<ion-content class="padding">
+    <ion-grid>
+        <ion-row>
+            <ion-col>
+                <div  class="ion-text-end">
+                    <button class="lng-btn" (click)="useLanguage('en')">EN</button>
+                    <button class="lng-btn" (click)="useLanguage('gr')">GR</button>
+                </div>
+            </ion-col>
+        </ion-row>
+        <ion-row class="ion-justify-content-center">
+            <img class="top-art" src="assets/img/topart.png">
+        </ion-row>
+        <ion-row class="ion-justify-content-center">
+            <ion-label class="login">{{ 'LANDING.LOG_IN_TO_SEAMX' | translate }}</ion-label>
+        </ion-row>
+        <ion-row class="ion-justify-content-center">
+            <ion-button expand="block" color="light" routerLink="" (click)="doGoogleLogin()">
+              <ion-icon src="assets/icon/google.svg" slot="start"></ion-icon>
+              <ion-label class="label">{{ 'LANDING.CONTINUE_WITH_GOOGLE' | translate }}</ion-label>
+            </ion-button>
+        </ion-row>
+        <ion-row class="ion-justify-content-center">
+            <ion-button expand="block" color="light" routerLink="" (click)="doFacebookLogin()">
+              <ion-icon src="assets/icon/facebook.svg" slot="start"></ion-icon>
+              <ion-label class="label">{{ 'LANDING.CONTINUE_WITH_FACEBOOK' | translate }}</ion-label>
+            </ion-button>
+        </ion-row>
+        <ion-row class="ion-justify-content-center">
+            <ion-label class="or">{{ 'LANDING.OR' | translate }}</ion-label>
+        </ion-row>
+        <ion-row class="ion-justify-content-center">
+            <ion-button expand="block" color="light" routerLink="/login" class="label">{{ 'LANDING.LOGIN_WITH_EMAIL' | translate }}</ion-button>
+        </ion-row>       
+        <!-- <ion-row style="margin-top:30px;" class="ion-justify-content-center">
+            <img class="logo" src="assets/img/logo_with_text.png">
+        </ion-row>               -->
+    </ion-grid>
+
+</ion-content>

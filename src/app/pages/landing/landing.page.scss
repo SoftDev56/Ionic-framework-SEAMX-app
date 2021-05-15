@@ -1,0 +1,67 @@
+ion-grid {    
+    .top-art {
+        width: auto;
+        height: 30vh;
+        margin: 10% auto;
+    }
+
+    .logo {
+        width: auto;
+        height: 15vh;
+    }
+
+    ion-row {
+        --ion-row-margin: 2%;
+        margin: 2%;
+    }
+
+    ion-button {
+        width: 70vw;
+        @media
+        (max-device-width: 600px) {
+            height: 4rem;
+            font-size: 1.4rem;
+        }                                                
+    
+        @media
+        (min-device-width: 601px) {
+            height: 4rem;
+            font-size: 2.2rem;
+        }      
+        
+        @media
+        (min-device-width: 1024px) {
+            height: 4rem;
+            font-size: 3rem;
+        }      
+
+        --border-color: #DFDFDF;
+        .label {
+            text-transform: none;
+            color: #030952; 
+        }
+        
+        ion-icon {
+            margin-right: 3%;
+        }
+    } 
+}
+
+.login {
+    font-size: 2.4rem;
+    margin-bottom: 10%;
+    font-weight: bold;
+    color: #030952;
+}
+
+.or {
+    font-size: 1.4rem;
+    color: #030952;
+}
+
+.lng-btn {
+    background: transparent;
+    font-size: 1.5rem;
+    color: #030952;
+    font-weight: 600;
+}

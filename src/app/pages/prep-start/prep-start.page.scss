@@ -1,0 +1,72 @@
+ion-content {
+    --background: linear-gradient(263.88deg, #5461FF 31.49%, #29B6F6 78.4%);
+
+    .prep-start__title {
+        font-size: 2.4rem;
+        font-weight: 600;
+        margin-top: 2rem;
+        margin-left: 4rem;
+    }
+
+    .prep-start__subtitle {
+        font-size: 1.8rem;
+        font-weight: 500;
+        margin-top: 1rem;
+        margin-left: 4rem;
+        margin-right: 2rem;
+    }
+    
+    .mid-heading {
+        margin:6%;
+    }
+
+    ion-progress-bar {
+        margin-left: 6%;
+        margin-right: 6%;
+    }
+
+    ion-text {
+        position: absolute;
+        color: #fff;
+        font-size: 1.1rem;
+    }
+
+    ion-text:first-child {
+        right: 6%;
+        margin-top: -6%;
+    }
+
+    ion-text:last-child {
+        left: 6%;
+        margin-top: 6%;
+    }
+
+    app-prep-slider {
+        width: 100%;
+        overflow: visible;
+    }
+
+    ion-button {
+        text-transform: none;    
+        @media
+        (max-device-width: 600px) {
+            font-size: 1.8rem;
+            width: 75vw;
+            height: 4rem;
+        }                                                
+
+        @media
+        (min-device-width: 601px) {
+            font-size: 2rem;
+            width: 75vw;
+            height: 4rem;
+        }
+
+        @media
+        (min-device-width: 1024px) {
+            font-size: 2.5rem;
+            width: 75vw;
+            height: 4rem;
+        }                                                                    
+    }
+}

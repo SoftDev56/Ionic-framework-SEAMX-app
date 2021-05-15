@@ -1,0 +1,177 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button color="light" menu="events"></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar> 
+</ion-header>
+<ion-row class="ion-justify-content-center photo-row">
+  <ion-col class="ion-justify-self-center photo-col">
+    <img *ngIf="seamxEvent.pagescontent" src="{{baseUrl + seamxEvent.pagescontent.topImagePath}}" class="img-top" alt=""/>
+    <div class="event-logo">
+      <img *ngIf="seamxEvent.pagescontent" src="{{ baseUrl + seamxEvent.pagescontent.logo }}" alt=""/>
+    </div>
+    <div class="title-box">
+      <div class="time-left-container" *ngIf="activeIndex == 0" color="light">
+        <ion-row style="justify-content: flex-end; margin-right: 1rem;">
+          <ion-label class="time-left">{{ 'EVENTS.TIME-LEFT' | translate }}</ion-label>
+        </ion-row>
+        <ion-row style="justify-content: flex-end; margin-right: 1rem;">
+          <ion-label class="days-hours-count" style="margin-right: 0.5rem;">{{seamxEvent.daysLeft}}</ion-label>
+          <ion-label class="days-hours-count">{{seamxEvent.hoursLeft}}</ion-label>
+        </ion-row>
+        <ion-row style="justify-content: flex-end; margin-right: 1rem;">
+          <ion-label class="days-hours">days hours</ion-label>
+        </ion-row>
+      </div>
+      
+  </div>
+    <div class="swipe-section">
+      <ion-label *ngIf="activeIndex == 1" class="swipe-title" color="light">{{ 'EVENTS.NEWS' | translate }}</ion-label>
+    <ion-label  *ngIf="activeIndex == 2" class="swipe-title" color="light">{{ 'EVENTS.SPONSORS' | translate }}</ion-label>
+    </div>
+  </ion-col>
+</ion-row>
+
+<ion-content>
+  <ion-slides #eventSlides pager="true" (ionSlideDidChange)="onSlideChange()">
+    <ion-slide>
+      <ion-grid>
+        <ion-row>
+            <ion-label class="sub-heading">{{ seamxEvent.name }}</ion-label>
+        </ion-row>       
+        <ion-row>
+            <p class="event-description">{{ seamxEvent.description }}</p>
+        </ion-row>
+        <ion-row class="mg-top10">
+          <ion-label class="sub-heading">{{ 'EVENTS.STARTING_DATE' | translate }}</ion-label>
+        </ion-row>       
+        <ion-row *ngFor="let race of seamxEvent.races" class="ion-text-start event-date">
+            <ion-col class="ion-text-start race-name" size="4">{{ race.name }}</ion-col>
+            <ion-col class="ion-text-start race-date" size="8">{{ race.displayDate | date: 'mediumDate' }}</ion-col>
+        </ion-row>       
+        <ion-row class="mg-top10">
+            <ion-label class="sub-heading">{{ 'EVENTS.LOCATION' | translate }}</ion-label>
+        </ion-row>       
+        <ion-row>
+            <ion-label class="race-location">{{ seamxEvent.city }}</ion-label>
+        </ion-row>       
+        <ion-row class="mg-top10">
+            <ion-label class="sub-heading">{{ 'EVENTS.GRAND_SPONSOR' | translate }}</ion-label>
+            <hr class="hr-40">
+        </ion-row>       
+        <ion-item *ngFor="let gSponsor of grandSponsors" lines="none">
+          <ion-thumbnail slot="start" style="width: 20%; height: auto; margin: 0;">
+            <img style="width: 100%; height: auto;" src="{{baseUrl + gSponsor.logo }}" alt=""/>
+          </ion-thumbnail>
+          <ion-row style="display: flex; flex-direction: column; margin-left: 2rem;">
+              <span class="gSponsorTitle">{{ gSponsor.shortdes }}</span>
+              <span class="gSponsorDescription__short">{{ gSponsor.details }}</span>
+          </ion-row>
+        </ion-item>
+        <hr class="hr-90">
+        <ion-row class="gallery-container">
+            <div class="tag">
+                <ion-label>{{'EVENTS.GALLERY' | translate }}</ion-label>
+            </div>
+            <img class="gallery" src="{{baseUrl + seamxEvent.images[0].imageUrl}}" alt="" (click)="openGallery()"/>
+            <!-- <ion-slides [options]="slideOpts" style="height: 200px; width: auto;">
+              <ion-slide *ngFor="let photo of seamxEvent.images">
+                    <img src="{{ baseUrl + photo.imageUrl }}" alt=""/>
+              </ion-slide>
+          </ion-slides> -->
+        </ion-row>
+        <ion-row class="event-map-container">
+            <div class="event-map">
+                <div class="tag">
+                    <ion-label>{{ 'EVENTS.ROUTE' | translate }}</ion-label>
+                </div>
+              <img *ngIf="seamxEvent.pagescontent.locationImagePath" class="map" src="{{baseUrl +  seamxEvent.pagescontent.locationImagePath}}"/>
+            </div>
+        </ion-row>     
+        <hr class="hr-90">
+        <ion-row class="ion-justify-content-center">
+            <ion-button expand="block" color="seamx" routerLink="/tab-root/tabs/questions">
+              <ion-icon name="help-circle-outline"></ion-icon>
+              {{ 'EVENTS.QUESTION' | translate }}
+            </ion-button>
+        </ion-row>  
+        <ion-row style="height:100px;"></ion-row>
+      </ion-grid>  
+    </ion-slide>                    
+    <ion-slide>
+      <ion-grid>
+        <ion-row class="ion-justify-content-center">
+          <span class="news-header mg-top10">{{ 'EVENTS.LATEST_NEWS_ABOUT' | translate }} {{ seamxEvent.name }}</span>
+        </ion-row>
+        <ion-row class="ion-justify-content-center">
+          <ion-content>
+            <ion-refresher slot="fixed" (ionRefresh)="refreshNews($event)">
+              <ion-refresher-content></ion-refresher-content>
+            </ion-refresher>
+          </ion-content>
+          <ion-list>
+            <ion-item class="news-item {{getReadMark(n)}}" id="newsitem-{{newsindex}}" *ngFor="let n of seamxEvent.news; let newsindex = index" (click)="readThis(newsindex, n)">
+                <ion-thumbnail slot="start">
+                  <img src="{{ n.imageUrl }}" alt=""/>
+                </ion-thumbnail>
+                <ion-label style="display: flex; flex-direction: column;">
+                  <span class="news-title">{{n.title}}</span>
+                  <span class="news-subtitle">{{n.description}}</span>
+                </ion-label>
+                <div class="time-box">
+                    {{ getTime(n.time) }}
+                </div>
+            </ion-item>                
+          </ion-list>
+        </ion-row>
+      </ion-grid>
+    </ion-slide>                    
+    <ion-slide>
+      <ion-grid>
+        <ion-row class="ion-justify-content-center">
+          <span class="sponsor-header mg-top10">{{ 'EVENTS.THE_SPONSORS' | translate }}</span>
+        </ion-row>
+        <ion-row class="ion-justify-content-center">
+          <ion-list>
+            <ion-card *ngFor="let sponsor of personas.sponsors">
+                <ion-item class="sponsor-item" (click)="openSponsor(sponsor)">
+                    <ion-thumbnail slot="start" style="text-align: center;">
+                      <img src="{{baseUrl + sponsor.logo }}" alt=""/>
+                    </ion-thumbnail>
+                    <ion-label>
+                      <span class="sponsorDesc__long">{{sponsor.shortdes}}</span>
+                      <!-- p>{{sponsor.details}}</p -->
+                    </ion-label>
+                </ion-item>                
+            </ion-card>
+          </ion-list>
+        </ion-row>
+        <ion-row>
+          <ion-label class="sub-heading">{{ 'EVENTS.THE_ORGANIZERS' | translate }}</ion-label>
+        </ion-row>       
+        <ion-row>
+            <p class="black-text">
+              {{ 'EVENTS.THE_ORGANIZERS_DETAILS' | translate }}             
+            </p>     
+            <p class="black-text">{{ 'EVENTS.THE_ORGANIZERS_CONTACT' | translate }}: organisers@gmail.com.</p>                   
+        </ion-row>
+        <ion-row>
+          <ion-label class="sub-heading">{{ 'EVENTS.ABOUT_US' | translate }}</ion-label>
+        </ion-row>       
+        <ion-row>
+            <p class="black-text">
+              {{ 'EVENTS.ABOUT_US_DETAILS' | translate }}
+            </p>   
+            <p class="black-text">
+              {{ 'EVENTS.ABOUT_US_DEMO' | translate }}
+            </p>
+            <p class="black-text">
+              www.seamxsports.com
+            </p>
+        </ion-row>
+
+      </ion-grid>    
+    </ion-slide>                    
+</ion-slides>  
+</ion-content>

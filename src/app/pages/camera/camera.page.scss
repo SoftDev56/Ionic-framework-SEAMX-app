@@ -1,0 +1,119 @@
+.profile-image {
+    width: 75vw;
+    height: 75vw;
+    background: #030952;
+    border: 1px solid #030952;
+    border-radius: 20px;
+    overflow: hidden;
+    margin: 2rem auto;
+    @media (min-device-width: 601px) {
+        width: 50vw;
+        height: 50vw;
+    }
+    img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+.skip {
+    color: #606060;
+    @media (max-device-width: 600px) {
+        font-size: 1.5rem;
+    }
+    @media (min-device-width: 601px) {
+        font-size: 2rem;
+    }
+    @media (min-device-width: 1024px) {
+        font-size: 2.5rem;
+    }
+}
+
+.camera__title {
+    font-size: 2.4rem;
+    color: #030952;
+    font-weight: bold;
+    margin-left: 4rem;
+}
+
+.camera__subtitle {
+    font-size: 1.8rem;
+    color: #606060;
+    margin-left: 4rem;
+    margin-top: 1.5rem;
+}
+
+.heading {
+    @media (max-device-width: 600px) {
+        font-size: 1.5rem;
+    }
+    @media (min-device-width: 601px) {
+        font-size: 2.5rem;
+    }
+    @media (min-device-width: 1024px) {
+        font-size: 3.5rem;
+    }      
+}
+
+.sub-heading--gray {
+    color: #606060;
+    font-weight: 500;
+    margin-left: 3%;
+    @media (max-device-width: 600px) {
+        font-size: 1.5rem;
+    }
+    @media (min-device-width: 601px) {
+        font-size: 2.5rem;
+    }
+    @media (min-device-width: 1024px) {
+        font-size: 3.5rem;
+    }      
+}
+
+ion-toolbar {
+    border: none;
+    --border-color: transparent;
+    box-shadow: none;
+}
+
+.camera__btns {
+    margin-top: 1rem;
+}
+
+ion-button {
+    text-transform: none;
+    height: 4rem;
+    font-weight: 600;
+    @media (max-device-width: 600px) {
+        font-size: 1.6rem;
+    }
+    @media (min-device-width: 601px) {
+        font-size: 2rem;
+    }
+    @media (min-device-width: 1024px) {
+        font-size: 2.5rem;
+    }                                                                   
+}
+
+ion-fab-button {
+
+    border: 1px solid #C1C1C1;
+    box-sizing: border-box;
+    border-radius: 45px;
+    font-size: 1.2rem;
+
+    @media (max-device-width: 600px) {
+        height: 8vh;
+        width: 8vh;
+    }                                                
+
+    @media (min-device-width: 601px) {
+        height: 8vh;
+        width:8vh;
+    }      
+    // @media (min-device-width: 1024px) {
+    //     height: 10vh;
+    //     width: 10vh;
+    // }                                                               
+
+}

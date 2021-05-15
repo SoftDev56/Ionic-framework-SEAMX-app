@@ -1,0 +1,77 @@
+ion-content {
+
+    --background: linear-gradient(161.64deg, #0B107B 11.32%, rgba(0, 0, 0, 0) 92.13%), #5754EF;
+
+    --padding: 0;
+    --margin:0;
+
+
+    .head, .sub-head {
+        font-family: Lato;
+        font-style: normal;
+        color: #ffffff;
+    }
+
+    .head {     
+        margin-top: 8rem;
+        text-align: center;   
+        font-weight: 900;
+        font-size: 3.6rem;
+
+    }
+
+    .sub-head {
+        font-size: 1.8rem;
+        font-weight: 800;
+        text-align: center;
+        margin-top: 4rem;
+        width: 80%;
+        @media
+        (min-device-width: 601px) {
+            font-size: 2rem;
+        }   
+        @media
+        (min-device-width: 1024px) {
+            font-size: 3rem;
+        }                                                                                                 
+    }
+    .allset-container {
+        margin: 0;
+        padding: 0;
+        @media (max-device-width: 600px) {
+            width: 100%;
+            font-size: 1.5rem;
+        }
+        @media (min-device-width: 601px) {
+            font-size: 2rem;
+            width: 80%;
+        }
+        @media (min-device-width: 1024px) {
+            font-size: 2.5rem;
+            width: 70%;
+        }
+    }
+    .allset-btn {
+        margin: 5vh auto;
+        height: 4rem;
+        width: 90vw;
+        font-size: 1.6rem;
+        @media (min-device-width: 601px) {
+            font-size: 2rem;
+            width: 80%;
+        }
+        @media (min-device-width: 1024px) {
+            font-size: 2.5rem;
+            width: 60%;
+        }                                                                               
+    }
+    
+
+    ion-row {
+        img {
+            height: auto;
+            width: 100vw;
+        }
+    }
+        
+}

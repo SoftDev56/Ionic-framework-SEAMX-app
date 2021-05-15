@@ -1,0 +1,35 @@
+<ion-card [ngStyle]="{'background': cardData.isComplete?'linear-gradient(124.21deg, #3FBDE8 -0.03%, #ABE659 111.73%)':'#fff'}">
+  <div style="height: 88%;" scrollY="true"> 
+    <span class="card-num">{{cardNum}}/{{totalCards}}</span>
+    <img *ngIf="cardData.logo" src="{{ baseUrl + cardData.logo }}" alt=""/>  
+    <img *ngIf="!cardData.logo" src="assets/img/prep.png" alt=""/>  
+    <ion-card-header>            
+        <ion-card-title color="seamxtext">{{ cardData.title }}</ion-card-title>
+        <ion-card-subtitle color="seamxtext">{{ cardData.subtitle }}</ion-card-subtitle>
+      </ion-card-header>
+      <div  class="line"></div>
+      <ion-card-content *ngIf="!isAnimating">
+          <span class="prep-text" color="seamxtext"><strong>{{ 'PREP-CARD.BEST_PRACTICES' | translate }}: </strong>{{ cardData.content }}</span>
+      </ion-card-content>
+    </div>
+     <ion-footer *ngIf="!cardData.isComplete" class="ion-no-border">
+      <ion-row *ngIf="!inside" class="footer ion-justify-content-center">
+          <ion-button *ngIf="!isAnimating" color="seamx" (click)="addNewPrep()">{{ 'PREP-CARD.ADD_PREPARATION' | translate }}</ion-button>
+      </ion-row>    
+     <ion-row *ngIf="inside" class="ion-justify-content-center" style="background: transparent;">
+         <ion-col>
+         <ion-button style="margin: 0.5rem auto;" color="seamx" expand="block" (click)="deletePrep()">
+             <ion-icon src="assets/icon/delete.svg"></ion-icon>
+         </ion-button>
+         </ion-col>
+         <ion-col>
+         <ion-button style="margin: 0.5rem auto;" color="seamx" expand="block" (click)="markPrepComplete()">
+             <ion-icon src="assets/icon/tick.svg"></ion-icon>
+         </ion-button>
+         </ion-col>
+      </ion-row>       
+    </ion-footer>
+    <ion-row class="ion-justify-content-center">
+      <ion-label class="complete" *ngIf="cardData.isComplete" color="light">{{ 'PREP-CARD.COMPLETED' | translate }}</ion-label>
+    </ion-row>    
+</ion-card>

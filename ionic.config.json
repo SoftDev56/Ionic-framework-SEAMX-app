@@ -1,0 +1,7 @@
+{
+  "name": "SEAMX",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

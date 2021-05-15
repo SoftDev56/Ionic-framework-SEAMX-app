@@ -1,0 +1,103 @@
+ion-grid {
+    
+    .top-art {
+        width: auto;
+        height: 34vh;
+        @media (min-device-width: 601px) {
+            height: 25vh;
+        }
+    }
+
+    ion-row {
+        // --ion-row-margin: 3%;
+        margin: 3% auto; 
+        @media (max-device-width: 600px) {
+            width: 90vw;
+        }
+        @media (min-device-width: 601px) {
+            width: 90vw;
+        }
+        @media (min-device-width: 1024px) {
+            width: 90vw
+        } 
+    }
+
+    ion-input {
+        border: 1px solid #DFDFDF;
+        border-radius: 10px;
+        text-transform: none;
+        color: #030952;
+        @media (max-device-width: 600px) {
+            font-size: 1.5rem;
+            height: 4rem;
+        }
+        @media (min-device-width: 601px) {
+            font-size: 2rem;
+            height: 4rem;
+        }
+        @media (min-device-width: 1024px) {
+            font-size: 2.5rem;
+            height: 4rem;
+        }                                                                      
+    }    
+
+    ion-button {
+        width: 100%;
+        @media (max-device-width: 600px) {
+            font-size: 1.6rem;
+            height: 4rem;
+            width: 90vw;
+        }
+        @media (min-device-width: 601px) {
+            font-size: 2rem;
+            height: 4rem;
+            width: 90vw
+        }
+        @media (min-device-width: 1024px) {
+            font-size: 2.5rem;
+            height: 4rem;
+            width: 90vw
+        }                                                                      
+        text-transform: none;
+    }
+}
+
+.skip {
+    color: #606060;
+    font-weight: bold;
+    @media (max-device-width: 600px) {
+        font-size: 1.5rem;
+    }
+    @media (min-device-width: 601px) {
+        font-size: 2rem;
+    }
+    @media (min-device-width: 1024px) {
+        font-size: 2.5rem;
+    }
+}
+
+.heading {
+    @media (max-device-width: 600px) {
+        font-size: 2.4rem;
+    }
+    @media (min-device-width: 601px) {
+        font-size: 3rem;
+    }
+    @media (min-device-width: 1024px) {
+        font-size: 3.5rem;
+    }      
+}
+
+.sub-heading {
+    width: 80vw;
+    text-align: center;
+    @media (max-device-width: 600px) {
+        font-size: 1.4rem;
+    }
+    @media (min-device-width: 601px) {
+        font-size: 2.2rem;
+    }
+    @media (min-device-width: 1024px) {
+        font-size: 3rem;
+    }      
+}

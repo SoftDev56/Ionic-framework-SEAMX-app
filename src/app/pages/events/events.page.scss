@@ -1,0 +1,437 @@
+ion-toolbar {
+    height: 36px;
+    --background: rgb(0,0,0,0.4);
+    --ion-color-base: rgb(0,0,0,0.4) !important;
+    border-bottom: .5px solid rgb(0,0,0,0.6) ; 
+    ion-menu-button {
+        margin-top: -20px !important;
+    }
+}
+
+.photo-row {
+    margin-top: -44px;
+    .photo-col {
+        padding: 0;
+        margin: 0;
+        
+        .title-box {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            // margin: 1%;
+            // width: 25vw;
+            @media 
+            (min-device-width: 601px) {
+                width: 22vw;
+            }                                     
+            z-index: 10;
+            font-family: Lato;
+            color: #fff;            
+            text-shadow: 1px 1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, -1px -1px 0 #000, 1px 0px 0 #000, 0px 1px 0 #000, -1px 0px 0 #000, 0px -1px 0 #000;
+
+            .countdown-container {
+                display: flex; 
+                flex-direction: column;
+            }
+
+            .days-hours {
+                color: #fff;
+                font-size: 1.1rem;
+                word-spacing: 1rem;
+                font-weight: bold;
+                
+                @media (min-device-width: 601px) {
+                    font-size: 1.8rem;
+                }
+                @media (min-device-width: 1024px) {
+                    font-size: 2.2rem;
+                }                                        
+            }
+
+           .days-hours-count {
+               font-size: 2.6rem;
+                font-weight: bold;
+            @media (min-device-width: 601px) {
+                font-size: 2.2rem;
+            }
+            @media (min-device-width: 1024px) {
+                font-size: 2.5rem;
+            }    
+           }
+
+            .time-left-container {
+                width:100%;
+                height:100%; 
+                display: flex; 
+                flex-direction: column;
+                margin-bottom: 0.5rem;
+            }
+            .time-left {
+                color: #fff;
+                font-size: 1.1rem;
+                word-spacing: 0.5rem;
+                font-weight: bold;
+                
+                @media (min-device-width: 601px) {
+                    font-size: 1.8rem;
+                }
+                @media (min-device-width: 1024px) {
+                    font-size: 2.2rem;
+                }                     
+
+            }
+        }
+
+        .swipe-section {
+            position: absolute;
+            top: 75%;
+            right: 2%;
+        }
+        .swipe-title {
+            font-weight: bold;
+            font-size: 2.6rem;
+            margin-right: 1rem;
+            text-shadow: 1px 1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, -1px -1px 0 #000, 1px 0px 0 #000, 0px 1px 0 #000, -1px 0px 0 #000, 0px -1px 0 #000;
+            text-transform: capitalize;   
+            @media (min-device-width: 601px) {
+                font-size: 3rem;
+            }
+            @media (min-device-width: 1024px) {
+                font-size: 3.5rem;
+            }                    
+        }
+
+        .event-logo {
+            position: absolute;
+            top: 70%;
+            left: 3%;
+            width: 20%;
+            height: auto;
+            padding: 6px;
+            border: 4px solid #fff;
+            background: #888;
+            z-index: 11;  
+            overflow: hidden;    
+
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        .img-top {
+            width: 100%;
+            height: 25vh;
+        }
+    }
+}
+
+ion-content {
+    ion-grid {
+        padding-top: 10%;
+        max-width: 100vw;
+
+        ion-list {
+            width:100%;
+            max-width: 100%;
+
+            .sponsor-item {
+                ion-thumbnail {
+                    width:30%;
+                    img {
+                        height: auto;
+                        width: auto;
+                    }    
+                } 
+                
+                ion-label {
+                    white-space: normal;
+                }                                
+            }
+
+            .isread {
+                background-color: #ffffff !important;
+            }
+            .news-item {
+                background-color: #fdefed;
+                .item-native {
+                    --background: transparent !important;
+                }
+                ion-thumbnail {
+                    img {
+                        border-radius: 10px;
+                    }    
+                }
+
+                ion-label {
+                    white-space: normal;
+                }
+                
+                .news-title {
+                    margin-bottom: 0.5rem;
+                    max-width: 80%;
+                    @media (max-device-width: 600px) {
+                        font-size: 1.5rem;
+                    }
+                    @media (min-device-width: 601px) {
+                        font-size: 1.8rem;
+                    }
+                    @media (min-device-width: 1024px) {
+                        font-size: 2rem;
+                    } 
+                }
+                
+                .news-subtitle {
+                    max-width: 80%;
+                    @media (max-device-width: 600px) {
+                        font-size: 1.2rem;
+                    }
+                    @media (min-device-width: 601px) {
+                        font-size: 1.5rem;
+                    }
+                    @media (min-device-width: 1024px) {
+                        font-size: 1.8rem;
+                    } 
+                }
+                
+                
+                .time-box {
+                    height: 20px;
+                    position: absolute;
+                    right: 5%;
+                    bottom: 0;
+                    text-align: right;
+                    color: #030952;
+                    @media (max-device-width: 600px) {
+                        font-size: 1rem;
+                    }
+                    @media (min-device-width: 601px) {
+                        font-size: 1.2rem;
+                    }
+                    @media (min-device-width: 1024px) {
+                        font-size: 1.5rem;
+                    } 
+                }
+            }
+        }
+
+        .news-header {
+            font-size: 1.8rem;
+            color: #606060;
+            text-align: left;
+            margin-left: 5%;
+        }
+
+        .sponsor-header {
+            font-size: 1.8rem;
+            color: #606060;
+            text-align: left;
+        }
+
+        .sub-heading {
+            font-size: 1.8rem;
+            color: #030952;
+            font-weight: bold;
+            text-align: left;
+            text-transform: uppercase;
+        }
+
+        .event-description {
+            font-size: 1.4rem;
+            font-weight: 400;
+            color: #000;
+            line-height: 1.3;
+            text-align: left;
+            margin: 0 1rem;
+            width: 90%;
+        }
+
+        .race-name {
+            font-size: 1.4rem;
+            font-weight: bold;
+        }
+        .race-date {
+            font-size: 1.4rem;
+            font-weight: 400;
+        }
+
+        .race-location {
+            font-size: 1.4rem;
+            font-weight: 400;
+            margin-left: 3.5%;
+            padding:0;
+        }
+
+        .hr-40 {
+            height: 0px; 
+            border: 0.5px solid #79797933; 
+            width: 40%; 
+            align-self: center;
+        }
+        .hr-90 {
+            height: 0px; 
+            border: 0.5px solid #79797933; 
+            width: 90%; 
+            text-align: center;
+        }
+        .hr-100 {
+            height: 0px; 
+            border: 0.5px solid #79797933; 
+            width: 100%;
+            text-align: center; 
+        }
+
+        .gray-text {
+            text-align: left;
+        }
+        .black-text {
+            font-size: 1.8rem;
+            color: #000000;
+            text-align: left;
+            padding: 0 1rem;
+        }
+
+        .event-date {
+            margin-left: 2%;
+            padding:0;
+            ion-col {
+                @media (min-device-width: 601px) {
+                    font-size: 2rem;
+                }
+                @media (min-device-width: 1024px) {
+                    font-size: 2.5rem;
+                }                                     
+            }
+        }
+        .event-map-container {
+            @media (min-device-width: 601px) {
+                width: 80%;
+                margin: 0 auto;
+            }
+            @media (min-device-width: 1024px) {
+                width: 80%;
+                margin: 0 auto;
+            }
+        }
+        .event-map {
+            width: 100vw;
+            height: auto;
+            margin-top: 5%;
+            margin-bottom: 5%;
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        .tag {
+            position: relative;
+            top: 12px;
+            left: 24px;
+            width: 90px;
+            height: 24px;
+            background:#fff;
+            border-radius: 4px;
+            ion-label {
+                font-family: Lato;
+                font-style: normal;
+                font-weight: 900;
+                font-size: 14px;
+                line-height: 17px;
+                text-transform: uppercase;
+                color: #5a5b63;
+            }
+        }
+
+        .gSponsorTitle {
+            font-size: 1.4;
+            font-weight: 600;
+            color: #000000;
+            @media (min-device-width: 601px) {
+                font-size: 2rem;
+            }
+            @media (min-device-width: 1024px) {
+                font-size: 2.5rem;
+            }       
+        }
+
+        .gSponsorDescription__short {
+            font-size: 1.2rem;
+            font-weight: 300;
+            color: #000000;
+            @media (min-device-width: 601px) {
+                font-size: 1.8rem;
+            }
+            @media (min-device-width: 1024px) {
+                font-size: 2.2rem;
+            }       
+        }
+        
+        .sponsorDesc__long {
+            @media (max-device-width: 600px) {
+                font-size: 1.4rem;
+            }
+            @media (min-device-width: 601px) {
+                font-size: 2rem;
+            }
+            @media (min-device-width: 1024px) {
+                font-size: 2.5rem;
+            } 
+        }
+
+        .gallery-container {
+            @media (min-device-width: 601px) {
+                width: 80%;
+                margin: 0 auto;
+            }
+            @media (min-device-width: 1024px) {
+                width: 80%;
+                margin: 0 auto;
+            }
+        }
+        .gallery {
+            margin: 0 auto;
+            width: auto;
+            height: 40vh;
+        }
+
+        .map {
+            margin: 0 auto;
+            width: auto;
+            height: 40vh;
+        }
+
+        ion-button {
+            width: 100%;
+            @media (max-device-width: 600px) {
+                font-size: 1.6rem;
+                height: 4rem;
+                width: 90vw;
+            }
+            @media (min-device-width: 601px) {
+                font-size: 2rem;
+                height: 4rem;
+                width: 90vw
+            }
+            @media (min-device-width: 1024px) {
+                font-size: 2.5rem;
+                height: 4rem;
+                width: 90vw
+            }                                                                      
+            text-transform: none;
+        }
+
+        .question {
+            font-size: 1.4rem;
+            @media
+        (min-device-width: 601px) {
+            font-size: 1.8rem;
+        }  
+        @media
+        (min-device-width: 1024px) {
+            font-size: 2.2rem;
+        }       
+        }
+
+    }
+}

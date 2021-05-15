@@ -1,0 +1,154 @@
+<!-- <ion-header class="ion-no-border">
+  <ion-toolbar *ngIf="showChat" color="transparent">
+    <ion-buttons slot="start">
+      <ion-button routerDirection="back" fill="clear" (click)="resetChat()">
+        <ion-icon slot="icon-only" name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header> -->
+
+<ion-content>
+  <ion-row class="ion-justify-content-center">
+    <ion-label
+      >See if you can find what you are looking for in the
+      suggestions</ion-label
+    >
+  </ion-row>
+  <!-- <div *ngIf="!showChat">
+      <ion-row *ngFor="let msg of messageButtons">
+        <ion-col class="ion-text-right">
+          <div class="message-button" (click)="openChat(msg)">{{msg}}</div>
+        </ion-col>
+      </ion-row>
+    </div> -->
+
+  <div class="wrapper">
+    <div class="row">
+      <div class="col">
+        <div class="acc-wrapper">
+          <div class="acc-container">
+            <div class="acc-toggle" (click)="openChat()">
+              <label>{{ 'QUESTIONS.GETTING_HELP_WITH_PREPS' | translate }}</label>
+            </div>
+            <div class="acc-body">
+              <p>{{ 'QUESTIONS.WHICH_PREP_DO_YOU_NEED_HELP_WITH' | translate}}</p>
+              <div class="acc-toggle">
+                <label style="margin-bottom: 25%;">{{ 'QUESTIONS.SET_THE_TARGET_TIME' | translate }}</label>
+              </div>
+              <div class="acc-body">
+                <p>
+                  {{ 'QUESTIONS.SET_THE_TARGET_TIME_ANSWER' | translate}}
+                </p>
+                <span class="support"
+                  >{{ 'QUESTIONS.DID_YOU_FIND_WHAT_YOU_WERE_LOOKING_FOR' | translate }}</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="acc-container">
+            <div class="acc-toggle" (click)="openChat()">
+              <label>{{ 'QUESTIONS.INFORMATION_ABOUT_THE_DAY_OF_THE_EVENT' | translate }}</label>
+            </div>
+            <div class="acc-body">
+              <p>{{ 'QUESTIONS.WHAT_INFORMATION_ARE_YOU_LOOKING_FOR' | translate }}</p>
+              <div class="acc-toggle">
+                <label style="margin-bottom: 25%;"
+                  >{{ 'QUESTIONS.THE_STARTING_TIME' | translate }}</label
+                >
+              </div>
+              <div class="acc-body">
+                <p>{{ 'QUESTIONS.THE_STARTING_TIME_ANSWER' | translate }}</p>
+                <span class="support"
+                  >{{ 'QUESTIONS.DID_YOU_FIND_WHAT_YOU_WERE_LOOKING_FOR' | translate }}</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="acc-container">
+            <div class="acc-toggle" (click)="openChat()">
+              <label>{{ 'QUESTIONS.INVITE_A_FRIEND_TO_THE_EVENT' | translate }}</label>
+            </div>
+            <div class="acc-body">
+              <p>
+                {{ 'QUESTIONS.INVITE_A_FRIEND_TO_THE_SAME_EVENT' | translate }}
+              </p>
+              <div class="acc-toggle">
+                <label style="margin-bottom: 25%;">{{ 'QUESTIONS.YES' | translate }}</label>
+              </div>
+              <div class="acc-body">
+                <p>
+                  {{ 'QUESTIONS.GO_AHEAD_SEND_INVITATION' | translate }}
+                </p>
+                <span class="support"
+                  >{{ 'QUESTIONS.DID_YOU_FIND_WHAT_YOU_WERE_LOOKING_FOR' | translate }}</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="acc-container">
+            <div class="acc-toggle" (click)="openChat()">
+              <label>{{ 'QUESTIONS.TECHNICAL_ISSUE' | translate }}</label>
+            </div>
+            <div class="acc-body">
+              <p>{{ 'QUESTIONS.WHAT_KIND_OF_TECHNICAL_ISSUE' | translate }}</p>
+              <div class="acc-toggle">
+                <label style="margin-bottom: 25%;">{{ 'QUESTIONS.CANNOT_LOGIN' | translate }}</label>
+              </div>
+              <div class="acc-body">
+                <p>
+                  {{ 'QUESTIONS.PASSWORD_FORGOTTEN' | translate }}
+                </p>
+                <span class="support"
+                  >{{ 'QUESTIONS.DID_YOU_FIND_WHAT_YOU_WERE_LOOKING_FOR' | translate }}</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- <ion-row *ngIf="userMessage && userMessage.length >= 2">
+        <ion-col class="ion-text-left">
+          <div class="support">Did you find what you were looking for?</div>
+        </ion-col>
+    </ion-row> -->
+
+  <div *ngIf="showChat">
+    <ion-row *ngFor="let message of userMessages">
+      <ion-col class="ion-text-right" style="margin: 2.5rem 0rem;">
+        <!-- <div class="sendMessage">{{ message }} </div> -->
+      </ion-col>
+    </ion-row>
+  </div>
+
+  <ion-row *ngFor="let message of userMessages">
+    <ion-col class="ion-text-left">
+      <div class="sendMessage">
+        {{ 'QUESTIONS.MSG_SENT_TO_ORGANIZER' | translate }}
+      </div>
+    </ion-col>
+  </ion-row>
+</ion-content>
+
+<ion-footer *ngIf="showChat">
+  <ion-toolbar>
+    <ion-input
+      class="input-msg"
+      [(ngModel)]="userMessage"
+      expand="block"
+      [placeholder]="'QUESTIONS.MESSAGE' | translate"
+      (keyup.enter)="postMessage()"
+    ></ion-input>
+    <ion-buttons slot="end">
+      <ion-button color="primary" (click)="postMessage()">
+        <ion-icon class="send-icon" slot="icon-only" name="send"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>

@@ -1,0 +1,27 @@
+<ion-content class="ion-no-padding">
+  <ion-grid class="congrats-container">
+      <ion-row class="ion-justify-content-center">
+        <ion-label color="light" class="head">{{ 'CONGRATS.CONGRATULATION' | translate }}!</ion-label>
+      </ion-row>
+      <ion-row class="ion-justify-content-center">
+        <ion-label color="light" class="sub-head"> 
+          {{ data.completePreps }}/{{ data.totalPreps }} {{ 'CONGRATS.PREPS_COMPLETED' | translate }}.
+        </ion-label>
+      </ion-row>     
+      <ion-row class="ion-justify-content-center">
+        <ion-label class="days-left"> {{ data.daysLeft }} {{ 'CONGRATS.DAYS_LEFT' | translate }}</ion-label>
+      </ion-row>     
+  </ion-grid>
+  <ion-grid class="congrats-container-sponsor">
+    <ion-row class="ion-justify-content-center">
+      <ion-label class="sponsor-msg">{{ sponsorQuote }}</ion-label>
+      <img class="sponsor-logo" src="{{ sponsorLogo }}">
+    </ion-row>   
+    <ion-row class="ion-justify-content-center">
+      <ion-button class="continue-btn" expand="block" color="light" (click)="close()">{{ 'CONGRATS.CONTINUE' | translate }}</ion-button>
+    </ion-row>
+  </ion-grid>
+  <!-- <ion-toolbar color="transparent">
+    <ion-button class="continue-btn" expand="full" color="light" (click)="close()">Continue</ion-button>
+  </ion-toolbar>   -->
+</ion-content>

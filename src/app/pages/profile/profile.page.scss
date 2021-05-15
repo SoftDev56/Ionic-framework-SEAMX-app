@@ -1,0 +1,143 @@
+ion-content {
+    .top-art {
+        position: fixed;
+        top:0;
+        left:0;
+        width:100%;
+        z-index: 10;
+    }
+
+    .avatar {
+        position: fixed;
+        top: 10%;
+        left: 10%;
+        width: 26vw;
+        height: 26vw;
+        border: 4px solid #fff;
+        border-radius: 20px;
+        background: #888;
+        z-index: 11;  
+        overflow: hidden;    
+    
+        img {
+            width: 100%;
+            height: auto;
+            background-position: center;
+            background-size: cover;
+        }
+    }
+    .centeralign {
+        left: 37%;
+    }
+
+    .name {
+        position: fixed;
+        top: 14%;
+        right: 0px;
+        width: 56vw;
+        z-index: 11;          
+
+        ion-label {
+            font-weight: 800;
+            @media (max-device-width: 600px) {
+                font-size: 2rem;
+            }
+            @media (min-device-width: 601px) {
+                font-size: 2.5rem;
+            }
+            @media (min-device-width: 1024px) {
+                font-size: 3rem;
+            } 
+        }            
+    }
+    .hide {
+        display: none;
+    }
+
+        ion-list {            
+            @media 
+            (min-device-width: 601px) {
+                margin-top: 40vh;
+            }         
+            @media 
+            (max-device-width: 600px) {
+                margin-top: 34vh;
+            } 
+
+            ion-item {
+                @media 
+                (min-device-width: 1024px) {
+                    font-size: 3rem;
+                    margin: 2vh;
+                }
+                @media 
+                (min-device-width: 601px) {
+                    font-size: 2.5rem;
+                    margin: 2vh;
+                }         
+                @media 
+                (max-device-width: 600px) {
+                    font-size: 2rem;
+                }  
+                
+                ion-icon {
+                    @media 
+                (min-device-width: 1024px) {
+                    font-size: 3rem;
+                }
+                @media 
+                (min-device-width: 601px) {
+                    font-size: 2.5rem;                }         
+                @media 
+                (max-device-width: 600px) {
+                    font-size: 2rem;
+                }       
+                }
+
+                ion-label {
+                    color: #030952;
+                    @media 
+                    (min-device-width: 1024px) {
+                        font-size: 2.2rem;
+                    }
+                    @media 
+                    (min-device-width: 601px) {
+                        font-size: 1.8rem;                }         
+                    @media 
+                    (max-device-width: 600px) {
+                        font-size: 1.4rem;
+                    }   
+                }
+        }    
+        
+            ion-radio-group {
+                ion-label{
+                    color: #030952;
+                    @media (max-device-width: 600px) {
+                        font-size: 1.4rem;
+                    }
+                    @media (min-device-width: 601px) {
+                        font-size: 1.8rem;
+                    }
+                    @media (min-device-width: 1024px) {
+                        font-size: 2.5rem;
+                    }     
+        
+                }
+
+                ion-radio {
+                    --ion-item-background: transparent;
+                    ion-item {
+                        background: transparent;
+                        background-color: transparent;
+                        --background: transparent;
+                        --background-activated: transparent;
+                        --background-activated-opacity: transparent;
+                        --ion-item-background: transparent;
+                        --color-activated: transparent;
+                        --ripple-color: transparent;                        
+                    }
+                }
+            }
+        }       
+}

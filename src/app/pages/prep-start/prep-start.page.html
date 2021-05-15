@@ -1,0 +1,26 @@
+<ion-content class="ion-fullscreen">
+    <ion-row *ngIf="!fromPreps">
+        <ion-label color="light" class="prep-start__title">{{ 'PREP-START.PREPARE' | translate }}</ion-label>
+    </ion-row>       
+    <ion-row *ngIf="!fromPreps">
+        <ion-label class="prep-start__subtitle" color="light">{{ 'PREP-START.HOW_DO_YOU_WANT_TO_PREPARE?' | translate }}!</ion-label>
+    </ion-row>
+    <ion-row *ngIf="fromPreps">
+            <ion-label color="light" class="mid-heading">{{ 'PREP-START.ADD_NEW_PREPS' | translate }}</ion-label>
+    </ion-row>           
+    <ion-row *ngIf="fromPreps" class="ion-justify-content-center">
+        <ion-text color="light">{{ daysLeft }} {{ 'PREP-START.DAYS_LEFT' | translate }}</ion-text>
+        <ion-progress-bar color="seamx" [value]="percentCompleted"></ion-progress-bar>
+        <ion-text color="light">{{completePreps}}/{{ totalSelectedPreps }} {{ 'PREP-START.PREPS_COMPLETED' | translate }}</ion-text>
+    </ion-row>
+    <div *ngIf="fromPreps" style="height: 6vh;"></div>
+    <!-- <div *ngIf="!fromPreps" style="height: 2vh;"></div> -->
+    <ion-row class="ion-justify-content-center">
+        <app-prep-slider [cards]="cards" (onPrepAdd)="addPrep($event)"></app-prep-slider>
+    </ion-row>
+    <ion-row class="ion-justify-content-center">
+        <ion-button expand="block" color="light" (click)="allSet()">{{ 'PREP-START.ALL_SET' | translate }}</ion-button>
+    </ion-row>    
+</ion-content>
+
+

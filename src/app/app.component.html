@@ -1,0 +1,35 @@
+<ion-app>
+    <div *ngIf="notification" (click)="alarmTab()" class="noti-alarm">
+        <p>{{notification.title}}</p>{{notification.body}}
+    </div>
+    <ion-menu side="start" menuId="events" contentId="main">
+        <ion-content>
+            <ion-grid>
+                <ion-row class="ion-justify-content-end">
+                    <ion-label class="heading">{{ 'MENU.MY_EVENTS' | translate }}</ion-label>
+                </ion-row>       
+                <ion-row class="ion-justify-content-center">
+                    <img class="art" src="assets/img/topart.png">
+                </ion-row>
+                <ion-row>
+                    <ion-list>
+                      <ion-card *ngFor="let event of events; let i = index" (click)="openEvent(i)">
+                          <ion-item>
+                              <ion-thumbnail slot="start">
+                                <img *ngIf="event.pagescontent" src="{{baseUrl + event.pagescontent.logo}}">
+                              </ion-thumbnail>
+                              <ion-label>
+                                <h2>{{event.name}}</h2>
+                                <p>{{event.type}}</p>
+                                <p>{{event.venue}}</p>
+                              </ion-label>
+                          </ion-item>                
+                      </ion-card>
+                    </ion-list>
+                </ion-row>        
+            </ion-grid>  
+          
+        </ion-content>        
+      </ion-menu>            
+  <ion-router-outlet id="main"></ion-router-outlet>
+</ion-app>

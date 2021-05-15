@@ -1,0 +1,146 @@
+{
+    "LANDING": {
+        "LOG_IN_TO_SEAMX":"Log in to SEAMX",
+        "CONTINUE_WITH_GOOGLE":"Continue with Google",
+        "CONTINUE_WITH_FACEBOOK":"Continue with Facebook",
+        "OR":"or",
+        "LOGIN_WITH_EMAIL":"Login with email"
+    },
+    "LOGIN": {
+        "LOG_IN_TO_SEAMX":"Log in to SEAMX",
+        "EMAIL":"Email",
+        "PASSWORD":"Password",
+        "LOGIN":"Login",
+        "WRONG_CREDENTIALS":"Wrong credentials!"
+    },
+    "WELCOME": {
+        "WELCOME":"Welcome",
+        "YOU_ARE_REGISTERED":"Your are registered for the",
+        "YOU_ARE_NOT_REGISTERED":"You are not registered to any event. Come back again when you have registered for an event.",
+        "WHATS_NEXT":"What's next",
+        "LOGOUT":"Logout",
+        "PICK_YOUR_EVENT":"Pick your event",
+        "TIME_LEFT":"Time left",
+        "DAYS_HOURS":"days hours"
+    },
+    "GOAL": {
+        "WHATS_YOUR_GOAL?":"WHAT'S YOUR GOAL?",
+        "TELL_US_WHAT_YOUR_MAIN_GOAL_IS_WITH_THIS_EVENT":"Tell us what your main goal is with this event.",
+        "YOU_JOINED_THIS_EVENT_TO":"You joined this event to",
+        "CHALLENGE_YOURSELF_OR_COMPETE":"Challenge yourself or compete",
+        "BE_SOCIAL_AND_HAVE_FUN":"Be social and have fun",
+        "IMPROVE_YOUR_FITNESS_AND_WELL-BEING":"Improve your fitness and well-being",
+        "NOT_REALLY_SURE":"Not really sure"
+    },
+    "CAMERA": {
+        "SKIP":"Skip",
+        "ITS_MORE_FUN_TO_MAKE_THIS_PERSONAL":"It's more fun to make this personal",
+        "TAKE_A_PHOTO_OF_YOURSELF_OR_UPLOAD_FROM_YOUR_CAMERA_ROLL":"Take a photo of yourself or upload from your camera roll",
+        "DISCARD":"Discard",
+        "SAVE":"Save"
+    },
+    "PREP-START": {
+        "PREPARE":"Prepare",
+        "ADD_PREPARATION":"Add Preparation",
+        "ALL_SET":"All set",
+        "HOW_DO_YOU_WANT_TO_PREPARE?":"How do you want to prepare? Pick and choose to make this event a success!",
+        "ADD_NEW_PREPS":"Add new preps",
+        "DAYS_LEFT":"days left",
+        "PREPS_COMPLETED":"preps completed"
+    },
+    "INVITE-FRIEND": {
+        "SKIP":"Skip",
+        "INVITE_A_FRIEND":"Invite a friend",
+        "SEND_EMAIL_TO_FRIEND":"Send an email to a friend to invite them to the event.",
+        "EMAIL":"Email",
+        "ADD_MORE_FRIENDS":"Add more friends",
+        "SEND":"Send"
+    },
+    "ALLSET": {
+        "YOU_ARE_ALLSET":"You're all set",
+        "DAYS_LEFT_FOR":"days left for the",
+        "CONTINUE":"Continue"
+    },
+    "EVENTS": {
+        "TIME-LEFT":"Time left",
+        "DAYS-HOURS":"days hours",
+        "NEWS":"News",
+        "SPONSORS":"Sponsors",
+        "STARTING_DATE":"STARTING DATE",
+        "LOCATION":"LOCATION",
+        "GRAND_SPONSOR":"GRAND SPONSOR",
+        "GALLERY":"GALLERY",
+        "ROUTE":"ROUTE",
+        "QUESTION":"I have a question",
+        "LATEST_NEWS_ABOUT":"Here are the latest news about",
+        "THE_SPONSORS":"Our friends that help us make this event",
+        "THE_ORGANIZERS":"THE ORGANISERS",
+        "THE_ORGANIZERS_DETAILS":"The organizers have initiated more than 12 marathons in the past. They are focused on bringing people together through athletic events. This is their passion so expect the event to be superbly organised.",
+        "THE_ORGANIZERS_CONTACT":"You can contact them here for any queries you might have",
+        "ABOUT_US":"ABOUT US",
+        "ABOUT_US_DETAILS":"In SEAMX our vision is to help organizers create events with value. Event that unite and empower the runners to acheiving their goals. From making registrations run smoother to motivating you to keep pushing for your goals, we believe can really make a difference and engage more people in such events.",
+        "ABOUT_US_DEMO":"You can visit our website to learn more and if you are interested in creating your own event do not hesitate to request a demo."
+    },
+    "PREPS": {
+        "MY_PREPARATIONS":"My preparations",
+        "DAYS_LEFT":"days left",
+        "PREPS_COMPLETED":"preps completed",
+        "ADD_NEW_PREPS":"Add new preps"
+    },
+    "PREP-CARD": {
+        "BEST_PRACTICES":"Best practices",
+        "ADD_PREPARATION":"Add preparation",
+        "COMPLETED":"Completed"
+    },
+    "CONGRATS": {
+        "CONGRATULATION":"Congrats!",
+        "PREPS_COMPLETED":"preps completed",
+        "DAYS_LEFT":"days left",
+        "CONTINUE":"Continue"
+    },
+    "QUESTIONS": {
+        "SEE_IF_YOU_CAN_FIND":"See if you can find what you are looking for in the suggestions",
+        "GETTING_HELP_WITH_PREPS":"Getting help with preps.",
+        "WHICH_PREP_DO_YOU_NEED_HELP_WITH":"Which Prep do you need help with?",
+        "SET_THE_TARGET_TIME":"Set the target time.",
+        "SET_THE_TARGET_TIME_ANSWER":"In order to know how you should plan your training you need to have a goal. A good idea is to have three goals: A realistic based on your performance in practices, an optimistic, and a super optimistic. By doing this, you will always chase to achieve something and will be always happy. Do not forget that your main goal, though, is to reach the finish line.",
+        "DID_YOU_FIND_WHAT_YOU_WERE_LOOKING_FOR":"Did you find what you were looking for?",
+        "INFORMATION_ABOUT_THE_DAY_OF_THE_EVENT":"Information about the day of the event.",
+        "WHAT_INFORMATION_ARE_YOU_LOOKING_FOR":"What information are you looking for?",
+        "THE_STARTING_TIME":"The starting time for the event.",
+        "THE_STARTING_TIME_ANSWER":"The starting time of the event is available on the event page.",
+        "INVITE_A_FRIEND_TO_THE_EVENT":"Inviting a friend to join me for the event.",
+        "INVITE_A_FRIEND_TO_THE_SAME_EVENT":"Do you want to invite a friend to the same event you have registered to?",
+        "YES":"Yes",
+        "GO_AHEAD_SEND_INVITATION":"Great, go ahead and click on `invite a friend`, and an email invitation will be sent to your friend.",
+        "TECHNICAL_ISSUE":"I have a technical issue with the app on my phone.",
+        "WHAT_KIND_OF_TECHNICAL_ISSUE":"What kind of issue do you experience?",
+        "CANNOT_LOGIN":"I cannot log in",
+        "PASSWORD_FORGOTTEN":"If you have forgotten your password, go to the event website and request a password reset.",
+        "MESSAGE":"Type a message...",
+        "MSG_SENT_TO_ORGANIZER":"Your message has been sent to the organizer and they will contact you soon."
+    },
+    "PROFILE": {
+        "INVITE_RUNNING_BUDDY":"Invite a running buddy",
+        "NOTIFICATIONS":"Notifications",
+        "NEVER":"Never",
+        "DAILY":"Daily",
+        "URGENT":"Only urgent",
+        "DETAILS":"My details",
+        "QUESTION":"I have a question",
+        "LOGOUT":"Logout"
+    },
+    "PROFILE-DETAIL": {
+        "NAME":"Name",
+        "EMAIL":"Email"
+    },
+    "MENU": {
+        "MY_EVENTS":"My Events"
+    },
+    "TABS": {
+        "EVENTS":"Events",
+        "PREPS":"Preps",
+        "QUESTIONS":"Questions",
+        "PROFILE":"Profile"
+    }
+}

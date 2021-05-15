@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "923092653800",
+    "firebase_url": "https://ionic-push-notification-629fd.firebaseio.com",
+    "project_id": "ionic-push-notification-629fd",
+    "storage_bucket": "ionic-push-notification-629fd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:923092653800:android:ce2c2420995c6360eb1b5d",
+        "android_client_info": {
+          "package_name": "com.seamx.mobile"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "923092653800-2nadmiitdnb288he1rrfrjipd0ia3duu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB0phPSp2zZRZqAVfbVO-rle8ctlPqclo4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "923092653800-2nadmiitdnb288he1rrfrjipd0ia3duu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

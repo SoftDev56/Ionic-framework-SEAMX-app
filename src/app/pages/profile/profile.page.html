@@ -1,0 +1,48 @@
+<ion-content class="ion-padding">
+    <img class="top-art" src="assets/img/profiletop.png" alt=""/>
+    <div class="avatar {{isImage('avatar')}}">
+            <img src="{{user.image}}" alt=""/>
+    </div>
+
+    <div class="name {{isImage('name')}}">
+            <ion-label color="light">{{ this.user.firstname + ' ' + this.user.lastname }}</ion-label>
+    </div>        
+    <ion-list lines="none">
+            <ion-item (click)="gotToInvite()">
+                    <ion-icon src="assets/icon/person.svg" slot="start"></ion-icon>   
+                    <ion-label>{{ 'PROFILE.INVITE_RUNNING_BUDDY' | translate }}</ion-label>
+            </ion-item>
+            <ion-item (click)="onNotifsClick()">
+                    <ion-icon src="assets/icon/bell.svg" slot="start"></ion-icon>   
+                    <ion-label>{{ 'PROFILE.NOTIFICATIONS' | translate }}</ion-label>
+            </ion-item>
+            <ion-radio-group [value]="selectedNotif" (ionChange)="onRadioChange($event)" *ngIf="openNotifSettings">                  
+                      <ion-item>
+                        <ion-label color="seamxtext" slot="end">{{ 'PROFILE.NEVER' | translate }}</ion-label>
+                        <ion-radio slot="end" value="never"></ion-radio>
+                      </ion-item>
+                  
+                      <ion-item>
+                        <ion-label color="seamxtext" slot="end">{{ 'PROFILE.DAILY' | translate }}</ion-label>
+                        <ion-radio slot="end" value="daily"></ion-radio>
+                      </ion-item>
+                  
+                      <ion-item>
+                        <ion-label color="seamxtext" slot="end">{{ 'PROFILE.URGENT' | translate }}</ion-label>
+                        <ion-radio slot="end" value="urgent"></ion-radio>
+                      </ion-item>
+            </ion-radio-group>                  
+            <ion-item routerLink="/profile-detail">
+                    <ion-icon src="assets/icon/info.svg" slot="start"></ion-icon>   
+                    <ion-label>{{ 'PROFILE.DETAILS' | translate }}</ion-label>
+            </ion-item>
+            <ion-item (click)="goToQuestions()">
+                <ion-icon src="assets/icon/question.svg" slot="start"></ion-icon>   
+                <ion-label>{{ 'PROFILE.QUESTION' | translate }}</ion-label>
+            </ion-item>
+            <ion-item (click)="logout()" routerLink="/landing">
+                <ion-icon src="assets/icon/logout.svg" slot="start"></ion-icon>                
+                <ion-label>{{ 'PROFILE.LOGOUT' | translate }}</ion-label>              
+            </ion-item>
+    </ion-list>      
+</ion-content>

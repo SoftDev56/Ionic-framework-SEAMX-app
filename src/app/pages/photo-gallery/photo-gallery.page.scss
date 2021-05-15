@@ -1,0 +1,39 @@
+.slider {
+    height: 100%;
+}
+
+.slide-container {
+    height: 100vh;
+}
+
+ion-slides {
+    width: 100%;
+    margin-top:auto;
+    margin-bottom: auto;
+
+    ion-slide {
+      width: 100%;
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+}
+    
+ion-footer {
+    ion-button {
+      span:first-child {
+        justify-content: flex-start;
+      }
+
+      &[text-right] {
+        span {
+          justify-content: flex-end;
+        }
+      }
+    }
+}
+
+ion-icon {
+  font-size: 1.8em;
+}

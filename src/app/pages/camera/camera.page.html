@@ -1,0 +1,51 @@
+<ion-header class="ion-no-border">
+    <ion-toolbar color="transparent">
+        <!-- <ion-buttons slot="start">
+          <ion-button routerDirection="back" routerLink="/goal" fill="clear">
+              <ion-icon slot="icon-only" name="arrow-back"></ion-icon>
+          </ion-button>        
+        </ion-buttons> -->
+        <ion-buttons slot="end">
+            <ion-button class="skip" fill="clear" routerDirection="forward" routerLink="//tab-root">
+                {{ 'CAMERA.SKIP' | translate }}
+            </ion-button>        
+          </ion-buttons>  
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content>
+      <ion-grid>
+          <ion-row>
+              <ion-label class="camera__title">{{ 'CAMERA.ITS_MORE_FUN_TO_MAKE_THIS_PERSONAL' | translate }}</ion-label>
+          </ion-row>       
+          <ion-row>
+              <ion-label class="camera__subtitle">{{ 'CAMERA.TAKE_A_PHOTO_OF_YOURSELF_OR_UPLOAD_FROM_YOUR_CAMERA_ROLL' | translate }}</ion-label>
+          </ion-row>
+          <ion-row class="ion-justify-content-center">
+            <div class="profile-image">
+              <img src="{{ profileImage }}" alt=""/>
+            </div>
+          </ion-row>
+          <ion-row class="ion-justify-content-center">
+              <ion-col>
+                <ion-fab-button class="ion-float-right" color="light" (click)="openCamera()">
+                    <ion-icon name="camera-outline"></ion-icon>
+                </ion-fab-button>
+              </ion-col>
+              <ion-col>
+                  <ion-fab-button color="light" (click)="openLibrary()">
+                      <ion-icon name="image-outline"></ion-icon>
+                  </ion-fab-button>
+              </ion-col>
+          </ion-row>  
+          <ion-row class="ion-justify-content-center camera__btns">
+              <ion-col class="ion-justify-self-end">
+                  <ion-button expand="block" color="seamx" (click)="discard()">{{ 'CAMERA.DISCARD' | translate }}</ion-button>
+              </ion-col>
+              <ion-col class="ion-justify-self-start">
+                  <ion-button expand="block" color="seamx" (click)="save()">{{ 'CAMERA.SAVE' | translate }}</ion-button>
+              </ion-col>
+          </ion-row>  
+      </ion-grid>
+  </ion-content>
+  

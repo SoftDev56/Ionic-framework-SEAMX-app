@@ -1,0 +1,29 @@
+<ion-header class="ion-no-border">
+    <ion-toolbar color="light">  
+        <ion-buttons slot="start">
+            <ion-back-button></ion-back-button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+      <ion-slides [options]="slideOpts" style="height: 200px; width: auto;">
+          <ion-slide *ngFor="let img of sponsor.sponsorimages">
+                <img src="{{ baseUrl + img.imageUrl }}" alt=""/>
+          </ion-slide>
+      </ion-slides>
+      <ion-grid>
+        <ion-row>
+            <ion-label class="sponsorDescription">{{ sponsor.shortdes }}</ion-label>
+        </ion-row>       
+        <ion-row>
+            <p class="sponsorDetails">{{ sponsor.longdes }}</p>
+        </ion-row>
+        <ion-row>
+            <p class="sponsorLink"> {{ sponsor.url }} </p>
+        </ion-row>    
+        <ion-row class="ion-justify-content-center">
+            <img src="{{baseUrl + sponsor.logo}}" alt=""/>
+        </ion-row>       
+    </ion-grid>    
+</ion-content>

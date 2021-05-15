@@ -1,0 +1,21 @@
+.noti-alarm {
+    background-color: #ca8dda;
+    z-index: 1;
+    &:focus {
+        display: none;
+    }
+    p {
+        font-weight: bold;
+    }
+}
+ion-list {
+    width: 100%;
+    ion-item{
+        font-family: Lato;
+        color: #0F187D;
+
+        img {
+            border-radius: 10px;
+        }
+    }
+}

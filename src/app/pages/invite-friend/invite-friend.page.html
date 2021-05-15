@@ -1,0 +1,40 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar color="transparent">
+
+      <ion-buttons *ngIf="isFromProfile" slot="start">
+          <ion-back-button defaultHref="/tab-root/tabs/profile"></ion-back-button>
+      </ion-buttons>
+        
+      <ion-buttons *ngIf="!isFromProfile" slot="end">
+          <ion-button class="skip" fill="clear" routerDirection="forward" routerLink="/allset">
+            {{ 'INVITE-FRIEND.SKIP' | translate }}
+          </ion-button>        
+        </ion-buttons>  
+
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-grid>
+      <ion-row class="ion-justify-content-center">
+          <img class="top-art" src="assets/img/inviteart.png">
+      </ion-row>
+      <ion-row style="margin-top:20px;" class="ion-justify-content-center">
+        <ion-label class="heading">{{ 'INVITE-FRIEND.INVITE_A_FRIEND' | translate }}</ion-label>
+      </ion-row>
+      <ion-row class="ion-justify-content-center">
+        <ion-label color="seamxtext" class="sub-heading">{{ 'INVITE-FRIEND.SEND_EMAIL_TO_FRIEND' | translate }}</ion-label>
+      </ion-row>     
+      <ion-row class="ion-justify-content-center">
+          <ion-input type="email" [placeholder]="'INVITE-FRIEND.EMAIL' | translate " (keyup)="getEmail($event)" ></ion-input>
+      </ion-row>
+      <ion-row *ngIf="showMore" class="ion-justify-content-center">
+        <ion-input type="email" [placeholder]="'INVITE-FRIEND.EMAIL' | translate " (keyup)="getotherEmail($event)" ></ion-input>
+      </ion-row>
+      <ion-row class="ion-justify-content-center">
+        <ion-button expand="block" color="seamx" (click)="addMore()">{{ 'INVITE-FRIEND.ADD_MORE_FRIENDS' | translate }}</ion-button>
+      </ion-row>    
+      <ion-row class="ion-justify-content-center">
+        <ion-button expand="block" color="seamx" (click)="sendInvites()">{{ 'INVITE-FRIEND.SEND' | translate }}</ion-button>
+      </ion-row>    
+  </ion-grid>
+</ion-content>

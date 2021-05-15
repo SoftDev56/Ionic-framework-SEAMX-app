@@ -1,0 +1,6 @@
+<ion-slides #prepSlides [options]="sliderConfig">
+    <ion-slide *ngFor="let card of cards; let i = index;">
+        <app-prep-card [totalCards]="cards.length" [cardNum]="i+1" [inside]="inside" [cardData]="card" (addPrep)="addPrep(card)" (delPrep)="delPrep(card)" (tickPrep)="tickPrep(card)"></app-prep-card>               
+    </ion-slide>                        
+</ion-slides>  
+<app-prep-card class="selected-card" [cardData]="detachedCard" [isAnimating]="isAnimating" *ngIf="isAnimating"></app-prep-card> 

@@ -1,0 +1,30 @@
+<ion-toolbar>
+    <ion-buttons slot="end">
+        <ion-button fill="clear" color="dark" (click)="close()">
+            <ion-icon name="close"></ion-icon>
+          </ion-button>
+    </ion-buttons>
+</ion-toolbar>
+
+<ion-slides pager="true">  
+  <ion-slide *ngFor="let photo of photos">
+         <img src="{{baseUrl + photo.imageUrl}}"/>
+   </ion-slide> 
+ </ion-slides>
+ <!--
+ <ion-footer>
+   <ion-row justify-content-around>
+     <ion-col no-padding>
+       <ion-button (click)="goBackward()" color="light" expand="block" fill="clear">
+         <ion-icon name="arrow-back"></ion-icon>
+       </ion-button>
+     </ion-col>
+     <ion-col no-padding>
+       <ion-button (click)="goForward()" color="light" expand="block" fill="clear">
+         <ion-icon name="arrow-forward"></ion-icon>
+       </ion-button>
+     </ion-col>
+   </ion-row>
+ </ion-footer>
+-->
+ 
